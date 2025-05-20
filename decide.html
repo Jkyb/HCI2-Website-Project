@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Decide - HCI2 Final Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+    <script>
+        // Load header and footer dynamically
+        function loadHTML(id, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                });
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            loadHTML("header-placeholder", "header.html");
+            loadHTML("footer-placeholder", "footer.html");
+        });
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main class="container my-4">
+        <h1>Project Decision Description</h1>
+        <section>
+            <h2>D: Determine the goals</h2>
+            <p><strong>Heuristic Evaluation for Computer Laboratory Management System.</strong></p>
+        </section>
+        <section>
+            <h2>E: Explore the questions</h2>
+            <ol>
+                <li><strong>Visibility of System Status</strong>
+                    <ul>
+                        <li>Does the design clearly communicate its state?</li>
+                        <li>Is feedback presented quickly after user actions?</li>
+                    </ul>
+                </li>
+                <li><strong>Match Between System and the Real World</strong>
+                    <ul>
+                        <li>Will user be familiar with the terminology used in the design?</li>
+                        <li>Do the design’s controls follow real-world conventions?</li>
+                    </ul>
+                </li>
+                <li><strong>User Control and Freedom</strong>
+                    <ul>
+                        <li>Does the design allow users to go back a step in the process?</li>
+                        <li>Are exit links easily discoverable?</li>
+                        <li>Can users easily cancel an action?</li>
+                        <li>Is Undo and Redo supported?</li>
+                    </ul>
+                </li>
+                <li><strong>Consistency and Standards</strong>
+                    <ul>
+                        <li>Does the design follow industry conventions?</li>
+                        <li>Are visual treatments used consistently throughout the design?</li>
+                    </ul>
+                </li>
+                <li><strong>Error Prevention</strong>
+                    <ul>
+                        <li>Does the design prevent slips by using helpful constraints?</li>
+                        <li>Does the design warn users before they perform risky actions?</li>
+                    </ul>
+                </li>
+                <li><strong>Recognition Rather Than Recall</strong>
+                    <ul>
+                        <li>Does the design keep important information visible, so that users do not have to memorize it?</li>
+                        <li>Does the design offer help in-context?</li>
+                    </ul>
+                </li>
+                <li><strong>Flexibility and Efficiency of Use</strong>
+                    <ul>
+                        <li>Does the design provide accelerators like keyboard shortcuts and touch gestures?</li>
+                        <li>Is content and functionality personalized or customized for individual users?</li>
+                    </ul>
+                </li>
+                <li><strong>Aesthetic and Minimalist Design</strong>
+                    <ul>
+                        <li>Is the visual design and content focused on the essentials?</li>
+                        <li>Have all distracting, unnecessary elements been removed?</li>
+                    </ul>
+                </li>
+                <li><strong>Help Users Recognize, Diagnose, and Recover from Errors</strong>
+                    <ul>
+                        <li>Does the design use traditional error message visuals, like bold, red text?</li>
+                        <li>Does the design offer a solution that solves the error immediately?</li>
+                    </ul>
+                </li>
+                <li><strong>Help and Documentation</strong>
+                    <ul>
+                        <li>Is help documentation easy to search?</li>
+                        <li>Is help provided in context right at the moment when the user requires it?</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>C: Choose the evaluation approach and methods</h2>
+            <p>
+                For the evaluation approach and methods, a combination of usability testing and heuristic evaluation were employed. Usability testing involves directly observing administrators as they interact with the system to complete various tasks, such as logging in as an administrator, exploring dashboard, managing category list, etc. Heuristic evaluation is conducted by usability experts who assess the interface using established principles like Nielsen’s heuristics.
+            </p>
+        </section>
+        <section>
+            <h2>I: Identify the practical issues</h2>
+            <ul>
+                <li>Availability of real users (administrators) for testing.</li>
+                <li>System is running on localhost, resulting in external users not being able to access it unless deployed online.</li>
+                <li>Testers must be familiar with mobile inventory systems to give relevant feedback.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>D: Decide how to deal with ethical issues</h2>
+            <ul>
+                <li>All usability participants must provide informed consent before taking part in any session.</li>
+                <li>No sensitive or personally identifiable information will be recorded without explicit permission.</li>
+                <li>All feedback gathered during testing will be treated anonymously and used solely for system improvement purposes.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>E: Evaluate, interpret, and present the data</h2>
+            <p>
+                Data gathered through usability testing and heuristic evaluation will be carefully analyzed to assess the system’s effectiveness. For usability testing, task success rates, error frequencies, and time-on-task will be compiled to measure the system's efficiency and usability. Heuristic evaluation will be used to identify violations of usability principles, such as issues with consistency, feedback, or error prevention.
+            </p>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

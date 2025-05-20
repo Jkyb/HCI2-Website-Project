@@ -1,0 +1,257 @@
+/* General body and layout styles */
+:root {
+    --bg-color-light: #f9f9f9;
+    --text-color-light: #000;
+    --primary-color-light: #004080;
+    --border-color-light: #004080;
+    --member-text-color-light: #555;
+    --member-border-color-light: #004080;
+    --logo-border-color-light: #004080;
+
+    --bg-color-dark: #121212;
+    --text-color-dark: #eee;
+    --primary-color-dark: #3399ff;
+    --border-color-dark: #3399ff;
+    --member-text-color-dark: #ccc;
+    --member-border-color-dark: #3399ff;
+    --logo-border-color-dark: #3399ff;
+}
+
+/* Light mode variables */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color-light);
+    color: var(--text-color-light);
+    padding-bottom: 60px; /* space for fixed footer */
+}
+
+/* Dark mode variables */
+body.dark-mode {
+    background: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Dark mode palette application */
+body.dark-mode main,
+body.dark-mode .issue,
+body.dark-mode .improvement {
+    background-color: #1e1e2f; /* dark background for readability */
+    color: #e0e0f0; /* light text color */
+    box-shadow: none;
+    border-color: #444466;
+}
+
+body.dark-mode a.nav-link {
+    color: #a0a0c0 !important;
+}
+
+body.dark-mode a.nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* Main container */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Adjust main background and text color for dark mode */
+body.dark-mode main {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Headings */
+h1, h2 {
+    color: var(--primary-color-light);
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: var(--primary-color-dark);
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-color-light);
+    color: var(--text-color-light);
+    padding: 1rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+body.dark-mode header {
+    background-color: var(--primary-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Navigation styles */
+nav {
+    margin-top: 0.5rem;
+    background-color: #0066cc;
+    padding: 0.5rem 0;
+}
+
+body.dark-mode nav {
+    background-color: #333;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #cce0ff;
+    text-decoration: underline;
+}
+
+body.dark-mode nav a {
+    color: #ddd;
+}
+
+body.dark-mode nav a:hover {
+    color: #fff;
+}
+
+/* Group members section */
+.group-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.member {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--member-border-color-light);
+}
+
+body.dark-mode .member img {
+    border-color: var(--member-border-color-dark);
+}
+
+.member h3 {
+    margin: 0.5rem 0 0.2rem 0;
+}
+
+.member p {
+    margin: 0;
+    font-style: italic;
+    color: var(--member-text-color-light);
+}
+
+body.dark-mode .member p {
+    color: var(--member-text-color-dark);
+}
+
+/* Logo container */
+.logo-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.logo-container img {
+    max-width: 300px;
+    height: auto;
+    border: 2px solid var(--logo-border-color-light);
+    border-radius: 8px;
+}
+
+body.dark-mode .logo-container img {
+    border-color: var(--logo-border-color-dark);
+}
+
+/* Evaluation Results page */
+.issue {
+    border: 1px solid var(--border-color-light);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    background: #fefefe;
+}
+
+body.dark-mode .issue {
+    border-color: var(--border-color-dark);
+}
+
+.issue img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .issue img {
+    border-color: var(--border-color-dark);
+}
+
+.issue h3 {
+    margin: 0.5rem 0 0.2rem 0;
+}
+
+.issue p {
+    margin: 0.2rem 0;
+}
+
+.pdf-link {
+    margin: 1rem 0;
+}
+
+ul.tasks {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+/* Proposed Improvements page */
+.improvement {
+    border: 1px solid var(--border-color-light);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    background: #fefefe;
+}
+
+body.dark-mode .improvement {
+    border-color: var(--border-color-dark);
+}
+
+.improvement img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color-light);
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+body.dark-mode .improvement img {
+    border-color: var(--border-color-dark);
+}
+
+.improvement h3 {
+    margin: 0.5rem 0 0.2rem 0;
+}
+
+.improvement p {
+    margin: 0.2rem 0;
+}
+
+/* Prevent content from being hidden under fixed header */
+body {
+    padding-top: 70px; /* Adjust based on header height */
+}

@@ -1,0 +1,55 @@
+<header class="fixed-top" style="background: linear-gradient(90deg, #001f4d, #000a1a); backdrop-filter: saturate(180%) blur(10px);">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: transparent;">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold d-flex align-items-center" href="index.html">
+                <img src="images/logos1.png" alt="Inventory Control System Logo" width="40" height="40" class="me-2" />
+                Inventory Control System
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="evaluation.html">Evaluation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="improvements.html">Improvements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="decide.html">DECIDE Framework</a>
+                    </li>
+                </ul>
+            </div>
+            <button id="dark-mode-toggle" class="btn btn-dark rounded-circle ms-3" aria-label="Toggle Dark Mode" style="width:40px; height:40px;">🌙</button>
+        </div>
+    </nav>
+</header>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        function setDarkMode(enabled) {
+            if (enabled) {
+                document.body.classList.add('dark-mode');
+                toggleButton.textContent = '☀️';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                document.body.classList.remove('dark-mode');
+                toggleButton.textContent = '🌙';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+        toggleButton.addEventListener('click', () => {
+            const isDark = document.body.classList.contains('dark-mode');
+            setDarkMode(!isDark);
+        });
+        // Initialize based on saved preference
+        const saved = localStorage.getItem('darkMode');
+        if (saved === 'enabled') {
+            setDarkMode(true);
+        }
+    });
+</script>

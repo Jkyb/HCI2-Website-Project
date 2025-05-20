@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proposed Improvements</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+    <script>
+        // Load header and footer dynamically
+        function loadHTML(id, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                });
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            loadHTML("header-placeholder", "header.html");
+            loadHTML("footer-placeholder", "footer.html");
+        });
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main class="container my-4">
+        <section>
+            <h2>UI Improvements</h2>
+            <div class="improvement">
+                <h3>Improvement 1: General Overview Dashboard</h3>
+                <p><strong>Justification:</strong> As an inventory system, it is important to have an overview of the whole inventory, even if summarized. It provides context with a dashboard instead of a transactional screen, reducing disorientation. Guides users to prioritize tasks and view system status at a glance. </p>
+            </div>
+            <div class="improvement">
+                <h3>Improvement 2: Instructions, Tooltips, Placeholders</h3>
+                <p><strong>Justification:</strong> Tooltips, placeholders, and a searchable help section provide immediate assistance, reducing training time and supporting usage efficiency.</p>
+            </div>
+            <!-- Additional improvements can be added similarly -->
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
